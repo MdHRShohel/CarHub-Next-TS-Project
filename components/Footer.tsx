@@ -18,6 +18,13 @@ const Footer = () => {
             {" "}
             CarHub 2023 <br /> All right reserved &copy;
           </p>
+          <Link
+            href="https://mdhrshohel.netlify.app/"
+            className="text-gray-500"
+          >
+            Developed by{" "}
+            <span className="text-gray-700">Md. Habibur Rahman Shohel</span>
+          </Link>
         </div>
         <div className="footer__links">
           {footerLinks.map((link) => (
