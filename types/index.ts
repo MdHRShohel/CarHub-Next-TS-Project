@@ -38,6 +38,10 @@ export interface FilterProps {
   model: string;
 }
 
+export interface HomeProps {
+  searchParams: FilterProps;
+}
+
 export interface optionProps {
   title: string;
   value: string;
