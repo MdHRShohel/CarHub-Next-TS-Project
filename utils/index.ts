@@ -1,7 +1,6 @@
 import { CarProps, FilterProps } from "@/types";
 
-export async function fetchCars(filters:FilterProps) {
-
+export async function fetchCars(filters: FilterProps) {
   const { manufacturer, year, fuel, limit, model } = filters;
 
   const headers = {
@@ -50,4 +49,15 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
   url.searchParams.append("angle", `${angle}`);
 
   return url.toString();
+};
+
+export const updateSearchParams = (type: string, value: string) => {
+  const searchParams = new URLSearchParams(window.location.search);
+
+  searchParams.set(type, value);
+
+  // Generate the new pathname with the updated search parameters
+  const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
+
+  return newPathname;
 };
